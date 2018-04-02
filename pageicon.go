@@ -135,7 +135,10 @@ func resolve(root, path string) string {
 	if path == "" {
 		return ""
 	}
-	if !strings.HasPrefix(root, "https://") {
+	if strings.HasPrefix(path, "http") {
+		return path
+	}
+	if !strings.HasPrefix(root, "http") {
 		root = "https://" + root
 	}
 	rootURL, _ := url.Parse(root)

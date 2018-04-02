@@ -41,6 +41,7 @@ func TestGetIconLinks(t *testing.T) {
 		<link href="/icon.png">
 		<link href="/icon.jpg">
 		<link rel="icon" href="/any.ico">
+		<link rel="icon" href="https://some.host.domain/any.ico">
 		<link rel="apple-touch" href="data:image/png;base64,embeddedimage">
 		<meta property="og:image" content="/this/is/an/icon.jpg">
 		<meta property="og:image" content="/this/is/an/icon-2.jpg">
@@ -54,6 +55,7 @@ func TestGetIconLinks(t *testing.T) {
 					"https://valid.com/icon.png",
 					"https://valid.com/icon.jpg",
 					"https://valid.com/any.ico",
+					"https://some.host.domain/any.ico",
 					"https://valid.com/this/is/an/icon.jpg",
 					"https://valid.com/this/is/an/icon-2.jpg",
 					"data:image/png;base64,embeddedimage",
